@@ -1,0 +1,750 @@
+@mixin fontsize($font : 24){
+    font-size:($font + px);
+    font-size:($font / 10)* 1rem;
+}
+
+
+$ja_font: ff-market-web ,sans-serif;
+$en_font: ff-market-web ,sans-serif;
+$en_font2: gaultier,sans-serif;
+
+@mixin text($font){
+font-weight: 300;
+font-style: normal;
+font-family:$ja_font;
+font-size:$font;
+}
+
+//color
+$background :#f3f9f9;
+$text: #283032;
+//
+
+// colors
+$baseColor: #51dbbd;
+$subColor: #1c5478;
+$keyColor: #ffbe55;
+$fontColor: #1c1b1b;
+$background: #f0f5f2;
+
+
+
+body {
+  font-family: $ja_font;
+  line-height:0;
+}
+section{
+  background:$background;
+  overflow:hidden;
+  position:relatuive;
+}
+
+.container{
+    width:85%;
+}
+p {
+ letter-spacing:2px;
+ line-height:2;
+ @include text(12);
+}
+
+
+h1{
+    margin:0;
+    padding:0;
+    line-height:0;
+}
+h2{
+    @include fontsize(36);
+    letter-spacing:2px;
+    font-family: $en_font;
+}
+h3{
+    font-family:$en_font;
+    @include fontsize(32);
+    letter-spacing:2px;
+    margin:0;
+    padding-bottom:50px;
+}
+
+h4{
+    font-family:$ja_font;
+    @include fontsize(16);
+    letter-spacing:2px;
+    margin:0;
+    padding-bottom:25px;
+}
+
+
+
+li{
+    list-style:none;
+    a{
+        text-decoration:none;
+    }
+}
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.text-center{
+    text-align:center;
+}
+
+
+/* Header
+------------------------------------------------------------*/
+header{
+  padding:5px 5% 0 5%;
+  width:100%;
+  align-items:center;
+  background: transparent;
+  z-index:1;
+  position:absolute;
+  top:0;
+  .logo{
+    height:auto;
+    text-align:center;
+    img{
+      width:50px;
+    }
+  }
+}
+//topcover
+#topcover{
+    width:100%;
+    height:100vh;
+    position:relative;
+background-image:url("../images/hero.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+.title{
+ position:absolute;
+ top:30%;
+ right:15%;
+}
+  .hero-nav{
+    position:absolute;
+    right:2%;
+    top:60%;
+    li{
+    padding:20px 0;
+    a{
+    font-family: $en_font2;
+    color:$text;
+    }
+    i{
+     @include fontsize(18);
+    }
+    }
+    .sns{
+        padding:10px 0;
+    }
+    }
+}
+
+
+//services//
+#concept{
+  background:$background;
+  padding-top:100px;
+  .sub_title{
+      h3{
+          position:relative;
+          &:after{
+              content:"";
+              width:50%;
+              position:absolute;
+              bottom:0;
+              right:25%;
+              height:1px;
+              background:#eee;
+              display:block;
+              
+          }
+      }
+     h4{
+          font-weight:bold;
+      }
+  }
+  .text{
+    padding-bottom:60px;
+    @include fontsize(12);
+  }
+  
+.vege-image{
+    text-align:center;
+    img{
+        width:100%;
+    }
+}
+
+}
+
+//aboutus
+#about{
+  background-image:url("../images/texture.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:100px 0;
+    .burger2{
+      text-align:center;
+      img{
+        width:20%;
+      }
+    }
+    
+    .card{
+      text-align:center;
+      background:rgba(255,255,255,.6);
+      border-radius:2px;
+      margin:60px 0 0 0;
+      .inner-image{
+        position:relative;
+        img{
+          width:100%;
+        }
+        p{
+          position:absolute;
+          bottom:0;
+          left: 0;
+          background-color: rgba(70,53,34,0.6);
+          width: 100%;
+          padding: 20px 5%;
+          letter-spacing: 2px;
+          margin-bottom:0;
+          color:rgba(255, 255, 255, 0.9);
+        }
+    }
+    .card-text{
+      margin-top:20px;
+      padding:0 5% 10px 5%;
+      @include fontsize(12);
+    }
+  }
+}
+
+  
+//people//
+
+#menu{
+ background:$background;
+ padding:100px 0 80px 0;
+
+ .card{
+.inner-image{
+  img{
+    width:80%;
+    margin:0 auto;
+  }
+}
+.enname{
+  margin:10px 0;
+  @include fontsize(18);
+  font-family:$en_font2;
+  font-weight:bold;
+}
+.japname{
+  font-family:$en_font;
+  @include fontsize(14);
+}
+.price{
+  font-style:Italic;
+  @include fontsize(14);
+  span{
+    font-family:$en_font2;
+    padding-left:10px;
+    
+  }
+}
+}
+}
+
+
+
+//contact
+
+#sidemenu{
+  background:url("../images/hero2.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  .side{
+    background:rgba(70,53,34,0.6);
+    margin:20% 0 0 0;
+    padding:5% 10%;
+  .flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin: 0 auto;
+    color: #fff;
+    padding-left:0;
+    li{
+      width:45%;
+    h4{
+    border-left: 2px solid #fff;
+    line-height: 1;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    padding:10px;
+    @include fontsize(14);
+    span{
+      font-family:$en_font2;
+      font-weight:bold;
+      display:block;
+      @include fontsize(18);
+      padding-bottom:10px;
+    }
+    }
+    p{
+      text-align:right;
+      font-family:$en_font2;
+      @include fontsize(16);
+    }
+    }
+  }
+}
+}
+
+
+#place{
+  padding:100px 0 50px 0;
+  background-image:url("../images/texture.jpg");
+  background-size:cover;
+  background-position:center;
+  .row{
+    position:relative;
+  .arrow{
+      width:30px;
+      position:absolute;
+      top:50%;
+      cursor:pointer;
+    }
+    .arrow2{
+      width:30px;
+      position:absolute;
+      top:50%;
+      right:0;
+    }
+  .owl-carousel{
+    width:80%;
+    margin: 0 auto;
+    padding-top:20px;
+  
+  }
+
+}
+.access{
+    text-align:center;
+    padding:80px 0 0 0;
+    p{
+      font-family:$en_font2;
+    }
+  }
+}
+
+//footer{
+  #footer{
+  background:$background;
+  position:relative;
+  padding:20px 0 0 0;
+  .footer-box{
+    text-align:center;
+  img{
+    width:100px;
+  }
+  ul{
+    padding:20px 0;
+    display:flex;
+    justify-content:center;
+    li{
+      padding:10px;
+      margin:0 20px;
+      a{
+        color:$text(14);
+        font-family:$en_font2;
+      }
+    }
+  }
+  .icon{
+    a{
+      margin:0 20px;
+      i{
+      font-size:24px;
+      color:$subColor;
+    }
+  }
+}
+}
+
+.copy{
+  text-align:center;
+  padding:30px 0 5px 0;
+  p{
+    color:$text;
+    font-family:en_font2;
+    @include fontsize(10);
+  }
+}
+}
+
+
+
+
+
+/////////////responsive//////////////////////////
+@media(min-width:551px){
+  .navi-link-sp{
+  display:none;
+}
+.ham{
+  display:none;
+}
+}
+
+
+@media(max-width:550px){
+  header{
+  padding:5% 5% 0 5%;
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  height:50px;
+  align-items:center;
+  background:transparent;
+  position:absolute;
+  top:0;
+  z-index:120;
+.nav-link-sp{
+  display:block;
+  z-index:110;
+  padding-top:5px;
+  .bar{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+}
+}
+.bar , .bar span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+  z-index:110;
+&:nth-of-type(1) {
+  top: 0;
+}
+&:nth-of-type(2) {
+  top: 12px;
+}
+&:nth-of-type(3) {
+  top: 24px;
+}
+}
+#bar_trigger.open span{
+  background:#333;
+}
+#bar_trigger.open span:nth-of-type(1) {
+  transform: translateY(12px) rotate(-45deg);
+}
+#bar_trigger.open span:nth-of-type(2) {
+  opacity: 0;
+}
+#bar_trigger.open span:nth-of-type(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
+}
+.ham{
+         width:100%;
+         height:100%;
+         padding-top:100px;
+         position:fixed;
+         top:0;
+         right:0;
+         z-index:101;
+         background: linear-gradient(to right, #51DBBD, #77B1DD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         transition:0.4s ease-in-out;
+         opacity:0;
+         li{
+             text-align:center;
+             padding:10px 0;
+             a{
+                 padding:15px 30px;
+                 color:$background;
+                 @include fontsize(16);
+                 display:inline-block;
+                 transition:transform .2s ease, color .2s ease;
+                 &:hover{
+                     transform:translateX(4px);
+                     color:lighten($background,10%);
+                 }
+             }
+            
+         }
+         .logo{
+             padding:0;
+             width:80%;
+             margin:auto;
+         }
+}
+.ham.open{
+opacity:1;
+}
+}
+
+
+#topcover{
+background-image:url('../images/hero.jpg');
+background-size:cover;
+background-position:center;
+position:relative;
+height:100vh;
+width:100%;
+.title{
+ position:absolute;
+ top:15%;
+ right:15%;
+}
+  .hero-nav{
+    display:none;
+    }
+}
+
+
+
+//services//
+#concept{
+  background:$background;
+  padding-top:80px;
+  .text{
+    padding-bottom:50px;
+    @include fontsize(12);
+  }
+  
+.vege-image{
+    text-align:center;
+    img{
+        width:100%;
+    }
+}
+
+}
+
+//aboutus
+#about{
+  background-image:url("../images/texture.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:80px 0 60px 0;
+    .burger2{
+      text-align:center;
+      img{
+        width:40%;
+      }
+    }
+    
+    .card{
+      text-align:center;
+      background:rgba(255,255,255,.6);
+      border-radius:2px;
+      margin:60px 20px 0 20px;
+      .inner-image{
+        position:relative;
+        img{
+          width:100%;
+        }
+        p{
+          position:absolute;
+          bottom:0;
+          left: 0;
+          background-color: rgba(70,53,34,0.6);
+          width: 100%;
+          padding: 20px 5%;
+          letter-spacing: 2px;
+          margin-bottom:0;
+          color:rgba(255, 255, 255, 0.9);
+        }
+    }
+    .card-text{
+      margin-top:20px;
+      padding:0 5% 10px 5%;
+      @include fontsize(12);
+    }
+  }
+}
+
+  
+//people//
+
+#menu{
+ background:$background;
+ padding:80px 0 60px 0;
+
+ .card{
+.inner-image{
+  img{
+    width:60%;
+    margin:0 auto;
+  }
+}
+.enname{
+  margin:10px 0;
+  @include fontsize(18);
+  font-family:$en_font2;
+  font-weight:bold;
+}
+.japname{
+  font-family:$en_font;
+  @include fontsize(14);
+}
+.price{
+  font-style:Italic;
+  @include fontsize(14);
+  span{
+    font-family:$en_font2;
+    padding-left:10px;
+    
+  }
+}
+}
+}
+
+
+
+//contact
+
+#sidemenu{
+  background:url("../images/hero2.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  .side{
+    background:rgba(70,53,34,0.6);
+    margin:50% 0 0 0;
+    padding:2% 5%;
+  .flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin: 0 auto;
+    color: #fff;
+    padding-left:0;
+    li{
+      width:45%;
+    h4{
+    border-left: 2px solid #fff;
+    line-height: 1;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    padding:10px;
+    @include fontsize(14);
+    span{
+      font-family:$en_font2;
+      font-weight:bold;
+      display:block;
+      @include fontsize(18);
+      padding-bottom:10px;
+    }
+    }
+    p{
+      text-align:right;
+      font-family:$en_font2;
+      @include fontsize(16);
+    }
+    }
+  }
+}
+}
+
+
+#place{
+  padding:80px 0 50px 0;
+  background-image:url("../images/texture.jpg");
+  background-size:cover;
+  background-position:center;
+  .row{
+    position:relative;
+  .arrow{
+      width:30px;
+      position:absolute;
+      top:50%;
+      cursor:pointer;
+    }
+    .arrow2{
+      width:30px;
+      position:absolute;
+      top:50%;
+      right:0;
+    }
+  .owl-carousel{
+    width:80%;
+    margin: 0 auto;
+    padding-top:20px;
+  
+  }
+
+}
+.access{
+    text-align:center;
+    padding:60px 0 0 0;
+    p{
+      font-family:$en_font2;
+    }
+  }
+}
+
+//footer{
+  #footer{
+  background:$background;
+  position:relative;
+  padding:20px 0 0 0;
+  .footer-box{
+    text-align:center;
+  img{
+    width:100px;
+  }
+  ul{
+    padding:30px 0;
+    display:flex;
+    justify-content:center;
+    li{
+      padding:20px;
+      margin:0 20px;
+      a{
+        color:$text(14);
+        font-family:$en_font2;
+      }
+    }
+  }
+  .icon{
+    a{
+      margin:0 20px;
+      i{
+      font-size:28px;
+      color:$subColor;
+    }
+  }
+}
+}
+
+.copy{
+  text-align:center;
+  padding:30px 0 5px 0;
+  p{
+    color:$text;
+    font-family:en_font2;
+    @include fontsize(10);
+  }
+}
+}
+}
