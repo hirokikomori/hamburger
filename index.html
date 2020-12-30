@@ -59,11 +59,16 @@
                 <li><a href="">MENU</a></li>
                 <li><a href="">ACCESS</a></li>
           </ul>
-          <ul class="social-icon">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li class="logo"><img src="images/burger-logo.png"></img></li>
+          <ul class="icons">
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
           </ul>
+          <div class="logo"><img src="images/burger-logo.png"></img></div>
+        </div>
+        
+        <div class="loading">
+            <div class="logo"><img class="logo_img" src="images/burger-logo.png"></div>
+            <h2 class="title">Hamburger with you</h2>
         </div>
         
     </header>
@@ -77,8 +82,8 @@
                 <li><a href="">CONCEPT</a></li>
                 <li><a href="">MENU</a></li>
                 <li><a href="">ACCESS</a></li>
-                <li class="sns"><a href=""></a><i class="fab fa-instagram"></i></li>
-                <li class="sns"><a href=""></a><i class="fab fa-twitter"></i></li>
+                <li class="sns"><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li class="sns"><a href=""><i class="fab fa-twitter"></i></a></li>
         </ul>
           
         </div>
@@ -91,10 +96,10 @@
         <div class="row">
           <div class="col-md-12">
            <div class="sub-title text-center">
-             <h3 class="text-center up">CONCEPT</h3>
-             <h4 class="bold">自然派志向のハンバーガー</h4>
+             <h3 class="text-center">CONCEPT</h3>
+             <h4 class="bold up">自然派志向のハンバーガー</h4>
            </div>
-           <p class="text text-center">
+           <p class="text text-center up">
              「毎日でも食べたくなるハンバーガーをつくる。」それがこの店の原点でした。20種類の無添加食材と<br>
              有機野菜にこだわり、身体が喜び、心を満たす。そんなハンバーガーをお届けしています。<br>
              「らしい」食べごたえや旨味と、ヘルシーな自然派志向を両方満たしたいあなたとあなたの生活に<br>
@@ -109,8 +114,8 @@
     <section id="about">
         <div class="container">
             <div class="sub-title text-center">
-             <h3 class="text-center up">OUR SPECIALITY</h3>
-             <h4 class="bold">3つのこだわり</h4>
+             <h3 class="text-center">OUR SPECIALITY</h3>
+             <h4 class="bold up">3つのこだわり</h4>
            </div>
             <div class="row">
                 <div class="burger2">
@@ -158,8 +163,8 @@
     <section id="menu">
     <div class="container">
             <div class="sub-title text-center">
-             <h3 class="text-center up">RECOMMENDED MENU</h3>
-             <h4>おすすめメニュー</h4>
+             <h3 class="text-center">RECOMMENDED MENU</h3>
+             <h4 class="up">おすすめメニュー</h4>
            </div>
             <div class="row">
                 
@@ -235,8 +240,8 @@
 <section id="place">
 <div class="container">
     <div class="sub-title text-center">
-             <h3 class="text-center up">OUR PLACE</h3>
-             <h4>緑に囲まれた広々スペース</h4>
+             <h3 class="text-center">OUR PLACE</h3>
+             <h4 class="up">緑に囲まれた広々スペース</h4>
            </div>
     <div class="row">
         
@@ -326,6 +331,22 @@ $(function(){
 　
 　
 });
+
+   setTimeout(function(){
+		$('.loading h2').fadeIn(1500);
+	},500); //0.5秒後にタイトルをフェードイン!
+	setTimeout(function(){
+		$('.loading img').fadeOut(1500);
+	},2800); 
+	setTimeout(function(){
+		$('.loading h2').fadeOut(1500);
+	},2800); //2.8秒後にロゴ、タイトルフェードアウト！
+   setTimeout(function(){
+		$('.loading').fadeOut(2000);
+	},3600); //3.8秒後に真っ白背景をフェードアウト！
+   setTimeout(function(){
+		$('#topcover').fadeIn(2000);
+	},3800); //4秒後に背景をフェードイン
 
 </script>
 
